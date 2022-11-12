@@ -1,31 +1,9 @@
 import { calculateGauge } from "./calculateGauge"
 
 describe("calculateGauge", () => {
-  test("throws an error when numberOfStitchesOrRows is not provided", () => {
-    expect(calculateGauge).toThrowError()
-  })
-
-  test("throws an error when numberOfStitchesOrRows is not a number", () => {
-    expect(() => {
-      calculateGauge("10.0", 5)
-    }).toThrowError()
-  })
-
   test("throws an error when numberOfStitchesOrRows is not a whole or half number", () => {
     expect(() => {
       calculateGauge(10.75, 5)
-    }).toThrowError()
-  })
-
-  test("throws an error when distanceInCentimetres is not provided", () => {
-    expect(() => {
-      calculateGauge(5)
-    }).toThrowError()
-  })
-
-  test("throws an error when distanceInCentimetres is not a number", () => {
-    expect(() => {
-      calculateGauge(5, "6.5")
     }).toThrowError()
   })
 
